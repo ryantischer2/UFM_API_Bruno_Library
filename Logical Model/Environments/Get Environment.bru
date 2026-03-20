@@ -1,0 +1,15 @@
+meta {
+  name: Get Environment
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/resources/environments/:name
+  body: none
+  auth: inherit
+}
+
+params:path {
+  name: <env_name>
+}

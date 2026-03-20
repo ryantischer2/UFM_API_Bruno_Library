@@ -1,0 +1,20 @@
+meta {
+  name: Get System by Name
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/resources/systems/:system_name
+  body: none
+  auth: inherit
+}
+
+params:path {
+  system_name: <system_name>
+}
+
+params:query {
+  ~chassis: true
+  ~ports: true
+}

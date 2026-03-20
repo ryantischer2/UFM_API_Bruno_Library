@@ -1,0 +1,21 @@
+meta {
+  name: Update SM Config
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{base_url}}/app/smconf
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "routing_engine": "updn"
+  }
+}

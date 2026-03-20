@@ -1,0 +1,24 @@
+meta {
+  name: Update SMTP Config
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{base_url}}/app/smtp
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "server": "smtp.example.com",
+    "port": 25,
+    "sender": "ufm@example.com",
+    "security": "none"
+  }
+}

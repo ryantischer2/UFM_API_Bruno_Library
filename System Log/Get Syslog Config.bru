@@ -1,0 +1,11 @@
+meta {
+  name: Get Syslog Config
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/app/syslog
+  body: none
+  auth: inherit
+}

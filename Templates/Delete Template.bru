@@ -1,0 +1,15 @@
+meta {
+  name: Delete Template
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{base_url}}/templates/:template_id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  template_id: template_title
+}

@@ -1,0 +1,11 @@
+meta {
+  name: Get SM Config
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/app/smconf
+  body: none
+  auth: inherit
+}

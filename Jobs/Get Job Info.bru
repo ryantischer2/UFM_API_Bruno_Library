@@ -1,0 +1,19 @@
+meta {
+  name: Get Job Info
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/jobs/:job_id/info
+  body: none
+  auth: inherit
+}
+
+params:path {
+  job_id: 1
+}
+
+params:query {
+  ~type: full_json
+}

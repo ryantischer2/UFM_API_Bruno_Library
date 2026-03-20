@@ -1,0 +1,29 @@
+meta {
+  name: Create Monitoring Template
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/app/monitoring
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "interval": 5,
+    "functions": ["RAW"],
+    "scope_object": "Device",
+    "monitor_object": "Device",
+    "attributes": ["Infiniband_XmtConstraintErrors"],
+    "objects": ["Grid.default.e41d2d0300167ee0"],
+    "name": "template",
+    "description": "",
+    "view_type": "Line"
+  }
+}

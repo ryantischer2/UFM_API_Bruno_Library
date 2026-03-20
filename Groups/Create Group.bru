@@ -1,0 +1,23 @@
+meta {
+  name: Create Group
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/resources/groups
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "group_name",
+    "type": "General",
+    "description": "Group description"
+  }
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Top X Telemetry
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/telemetry
+  body: none
+  auth: inherit
+}
+
+params:query {
+  type: topX
+  membersType: Ports
+  PickBy: PortTXPackets
+  limit: 15
+  ~attributes: [PortRcvPktsExtended_Rate]
+}

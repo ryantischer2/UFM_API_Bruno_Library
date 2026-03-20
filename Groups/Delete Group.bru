@@ -1,0 +1,15 @@
+meta {
+  name: Delete Group
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{base_url}}/resources/groups/:group_name
+  body: none
+  auth: inherit
+}
+
+params:path {
+  group_name: <group_name>
+}

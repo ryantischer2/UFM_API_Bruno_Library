@@ -1,0 +1,15 @@
+meta {
+  name: Delete Monitoring Template
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{base_url}}/app/monitoring/:template_name
+  body: none
+  auth: inherit
+}
+
+params:path {
+  template_name: template
+}

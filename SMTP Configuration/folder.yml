@@ -1,0 +1,6 @@
+info:
+  name: SMTP Configuration
+  type: folder
+  seq: 22
+
+request: {}

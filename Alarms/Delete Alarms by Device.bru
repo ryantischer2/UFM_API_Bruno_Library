@@ -1,0 +1,15 @@
+meta {
+  name: Delete Alarms by Device
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{base_url}}/app/alarms
+  body: none
+  auth: inherit
+}
+
+params:query {
+  device_id: <device_id>
+}

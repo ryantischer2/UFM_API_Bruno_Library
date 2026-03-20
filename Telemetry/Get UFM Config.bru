@@ -1,0 +1,11 @@
+meta {
+  name: Get UFM Config
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/app/ufm_config
+  body: none
+  auth: inherit
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Delete Environment
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{base_url}}/resources/environments/:name
+  body: none
+  auth: inherit
+}
+
+params:path {
+  name: <env_name>
+}

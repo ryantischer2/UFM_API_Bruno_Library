@@ -1,0 +1,17 @@
+meta {
+  name: Get All Templates
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/templates
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~tags: switch,Mellanox
+  ~profile: ib
+  ~system_type: Mellanox Switch
+}

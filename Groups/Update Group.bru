@@ -1,0 +1,25 @@
+meta {
+  name: Update Group
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base_url}}/resources/groups/:group_name
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+params:path {
+  group_name: <group_name>
+}
+
+body:json {
+  {
+    "description": "new_description"
+  }
+}

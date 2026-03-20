@@ -1,0 +1,16 @@
+meta {
+  name: Delete Logical Server
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{base_url}}/resources/environments/:env_name/logical_servers/:server_name
+  body: none
+  auth: inherit
+}
+
+params:path {
+  env_name: <env_name>
+  server_name: <server_name>
+}

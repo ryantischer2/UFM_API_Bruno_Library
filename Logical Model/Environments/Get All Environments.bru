@@ -1,0 +1,11 @@
+meta {
+  name: Get All Environments
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/resources/environments
+  body: none
+  auth: inherit
+}

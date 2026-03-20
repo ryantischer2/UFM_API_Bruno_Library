@@ -1,0 +1,19 @@
+meta {
+  name: Delete Policies
+  type: http
+  seq: 6
+}
+
+delete {
+  url: {{base_url}}/app/unhealthy_ports/policy
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  ["9c0591030085b3c0_1"]
+}

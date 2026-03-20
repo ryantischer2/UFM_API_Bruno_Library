@@ -1,0 +1,15 @@
+meta {
+  name: Get Ports by System
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/resources/systems/:system_name/ports
+  body: none
+  auth: inherit
+}
+
+params:path {
+  system_name: <system_name>
+}

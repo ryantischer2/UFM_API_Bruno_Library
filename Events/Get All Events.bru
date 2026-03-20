@@ -1,0 +1,19 @@
+meta {
+  name: Get All Events
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/app/events
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~object_name: 
+  ~type: 
+  ~category: 
+  ~severity: 
+  ~group: 
+}

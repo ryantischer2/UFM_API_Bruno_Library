@@ -1,0 +1,27 @@
+meta {
+  name: Update Syslog Config
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{base_url}}/app/syslog
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "active": false,
+    "destination": "local",
+    "level": "ERROR",
+    "ufm_log": true,
+    "events_log": true,
+    "rest_api_log": false,
+    "authentication_service_log": false
+  }
+}

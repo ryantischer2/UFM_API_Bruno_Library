@@ -1,0 +1,24 @@
+meta {
+  name: Create Mirroring Template
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/app/mirrorings
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "system_id": "<system_id>",
+    "target_port": "<target_port_id>",
+    "packet_size": "200",
+    "service_level": "5"
+  }
+}

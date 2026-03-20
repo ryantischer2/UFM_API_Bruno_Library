@@ -1,0 +1,21 @@
+meta {
+  name: History Telemetry
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/telemetry
+  body: none
+  auth: inherit
+}
+
+params:query {
+  type: history
+  membersType: Ports
+  attributes: [Infiniband_PckInRate]
+  members: [<member_guid>]
+  start_time: -1h
+  end_time: -0min
+  ~result_format: Port
+}

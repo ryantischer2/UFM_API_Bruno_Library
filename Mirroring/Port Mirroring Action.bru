@@ -1,0 +1,24 @@
+meta {
+  name: Port Mirroring Action
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{base_url}}/app/mirrorings/action
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "port_id": "<port_id>",
+    "action": "enable",
+    "rx": true,
+    "tx": true
+  }
+}

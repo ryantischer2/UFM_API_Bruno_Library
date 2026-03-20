@@ -1,0 +1,20 @@
+meta {
+  name: Get All Ports
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/resources/ports
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~sys_type: Switch
+  ~active: true
+  ~cable_info: true
+  ~page_number: 1
+  ~rpp: 50
+  ~brief: true
+}

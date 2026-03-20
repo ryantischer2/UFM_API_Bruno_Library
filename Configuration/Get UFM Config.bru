@@ -1,0 +1,15 @@
+meta {
+  name: Get UFM Configuration
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/app/ufm_config
+  body: none
+  auth: inherit
+}
+
+docs {
+  Returns UFM configuration including telemetry status, monitoring mode, syslog status, license state, and LS auditing status.
+}

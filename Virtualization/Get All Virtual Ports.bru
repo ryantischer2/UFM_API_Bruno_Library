@@ -1,0 +1,16 @@
+meta {
+  name: Get All Virtual Ports
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/resources/vports
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~system: <system_guid>
+  ~port: <port_name>
+}

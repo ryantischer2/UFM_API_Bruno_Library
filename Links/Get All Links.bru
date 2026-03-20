@@ -1,0 +1,16 @@
+meta {
+  name: Get All Links
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/resources/links
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~cable_info: true
+  ~active: true
+}

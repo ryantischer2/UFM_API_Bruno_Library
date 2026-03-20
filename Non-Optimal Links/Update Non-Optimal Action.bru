@@ -1,0 +1,21 @@
+meta {
+  name: Update Non-Optimal Action
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{base_url}}/app/non_optimal_ports
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "bad_port_action": "ignore"
+  }
+}

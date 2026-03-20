@@ -1,0 +1,15 @@
+meta {
+  name: Get Inventory Summary
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base_url}}/monitoring/inventory
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~show_ports: true
+}

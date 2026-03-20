@@ -1,0 +1,21 @@
+meta {
+  name: Simulate Events Policy
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{base_url}}/app/events_policy/simulation
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "events_ids": ["250", "156", "344"]
+  }
+}

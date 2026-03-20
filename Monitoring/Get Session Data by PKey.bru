@@ -1,0 +1,19 @@
+meta {
+  name: Get Session Data by PKey
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{base_url}}/monitoring/session/:session_id/data
+  body: none
+  auth: inherit
+}
+
+params:path {
+  session_id: 0
+}
+
+params:query {
+  pkey: default
+}

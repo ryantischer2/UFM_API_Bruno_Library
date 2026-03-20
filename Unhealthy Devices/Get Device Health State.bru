@@ -1,0 +1,15 @@
+meta {
+  name: Get Device Health State
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/app/unhealthy_devices/:device_name
+  body: none
+  auth: inherit
+}
+
+params:path {
+  device_name: <device_name>
+}

@@ -1,0 +1,11 @@
+meta {
+  name: Get Unhealthy Devices
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/app/unhealthy_devices
+  body: none
+  auth: inherit
+}

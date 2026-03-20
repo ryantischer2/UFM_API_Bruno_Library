@@ -1,0 +1,19 @@
+meta {
+  name: Get Group by Name
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/resources/groups/:group_name
+  body: none
+  auth: inherit
+}
+
+params:path {
+  group_name: <group_name>
+}
+
+params:query {
+  ~members: true
+}

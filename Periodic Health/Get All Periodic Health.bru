@@ -1,0 +1,11 @@
+meta {
+  name: Get All Periodic Health
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://{{ufm_host}}/ufmRestV2/periodic_health
+  body: none
+  auth: inherit
+}

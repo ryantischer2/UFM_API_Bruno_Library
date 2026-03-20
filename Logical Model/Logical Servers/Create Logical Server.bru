@@ -1,0 +1,26 @@
+meta {
+  name: Create Logical Server
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/resources/environments/:env_name/logical_servers
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+params:path {
+  env_name: <env_name>
+}
+
+body:json {
+  {
+    "name": "logical-server-1",
+    "description": "logical server for cluster 1"
+  }
+}

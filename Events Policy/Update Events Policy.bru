@@ -1,0 +1,35 @@
+meta {
+  name: Update Events Policy
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base_url}}/app/events_policy/:policy_id
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+params:path {
+  policy_id: 133
+}
+
+body:json {
+  {
+    "duration": 10,
+    "to_log": true,
+    "to_syslog": true,
+    "to_snmp": true,
+    "to_ui": true,
+    "to_mail": true,
+    "use_alarm": true,
+    "threshold": 10,
+    "call_script": true,
+    "severity": "Warning",
+    "action": "Isolated"
+  }
+}

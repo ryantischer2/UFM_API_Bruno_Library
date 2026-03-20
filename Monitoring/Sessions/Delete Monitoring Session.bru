@@ -1,0 +1,15 @@
+meta {
+  name: Delete Monitoring Session
+  type: http
+  seq: 2
+}
+
+delete {
+  url: {{base_url}}/monitoring/session/:session_id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  session_id: 1
+}

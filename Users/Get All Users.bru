@@ -1,0 +1,11 @@
+meta {
+  name: Get All Users
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/app/users
+  body: none
+  auth: inherit
+}

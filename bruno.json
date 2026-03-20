@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "UFM",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

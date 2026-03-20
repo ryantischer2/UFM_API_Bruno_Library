@@ -1,0 +1,17 @@
+meta {
+  name: Get All Modules
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/resources/modules
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~type: hca
+  ~system_name: <system_name>
+  ~ports: true
+}

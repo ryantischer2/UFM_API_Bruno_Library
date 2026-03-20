@@ -1,0 +1,15 @@
+meta {
+  name: Get Port by Name
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/resources/ports/:port_name
+  body: none
+  auth: inherit
+}
+
+params:path {
+  port_name: <port_name>
+}

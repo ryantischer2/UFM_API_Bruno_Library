@@ -1,0 +1,11 @@
+meta {
+  name: Get All Tests
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/fabricValidation/tests
+  body: none
+  auth: inherit
+}

@@ -1,0 +1,25 @@
+meta {
+  name: Set Manual IP
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base_url}}/resources/systems/:system_id
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+params:path {
+  system_id: <system_id>
+}
+
+body:json {
+  {
+    "ip": "10.0.0.1"
+  }
+}

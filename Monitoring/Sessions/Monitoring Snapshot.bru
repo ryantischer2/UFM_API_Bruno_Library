@@ -1,0 +1,26 @@
+meta {
+  name: Monitoring Snapshot
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{base_url}}/monitoring/snapshot
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "attributes": ["Infiniband_MBOut", "Infiniband_MBIn"],
+    "functions": ["RAW"],
+    "scope_object": "Site",
+    "interval": 2,
+    "monitor_object": "Device",
+    "objects": ["Grid.default"]
+  }
+}

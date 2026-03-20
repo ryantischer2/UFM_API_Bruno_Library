@@ -1,0 +1,15 @@
+meta {
+  name: Get Power Consumption
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{base_url}}/resources/systems/power
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~csv_format: true
+}

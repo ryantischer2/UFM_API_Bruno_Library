@@ -1,0 +1,15 @@
+meta {
+  name: Get Report
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/reports/:report_id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  report_id: 1
+}

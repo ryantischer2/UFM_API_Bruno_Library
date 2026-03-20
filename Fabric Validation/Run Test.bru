@@ -1,0 +1,15 @@
+meta {
+  name: Run Test
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/fabricValidation/tests/:test_name
+  body: none
+  auth: inherit
+}
+
+params:path {
+  test_name: CheckLinks
+}

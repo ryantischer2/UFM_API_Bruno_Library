@@ -1,0 +1,15 @@
+meta {
+  name: Get Last Report
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base_url}}/reports/last_report/:report_type
+  body: none
+  auth: inherit
+}
+
+params:path {
+  report_type: Fabric_Health
+}

@@ -1,0 +1,22 @@
+meta {
+  name: Mark All Healthy
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{base_url}}/app/unhealthy_ports
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "ports": ["ALL"],
+    "ports_policy": "HEALTHY"
+  }
+}

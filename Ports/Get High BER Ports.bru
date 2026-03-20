@@ -1,0 +1,16 @@
+meta {
+  name: Get High BER Ports
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{base_url}}/resources/ports
+  body: none
+  auth: inherit
+}
+
+params:query {
+  high_ber_only: true
+  ~high_ber_severity: error
+}

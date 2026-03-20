@@ -1,0 +1,15 @@
+meta {
+  name: Get Unhealthy Port
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/app/unhealthy_ports/:port_name
+  body: none
+  auth: inherit
+}
+
+params:path {
+  port_name: <port_name>
+}

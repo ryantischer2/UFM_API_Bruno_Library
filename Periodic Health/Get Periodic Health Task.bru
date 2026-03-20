@@ -1,0 +1,15 @@
+meta {
+  name: Get Periodic Health Task
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://{{ufm_host}}/ufmRestV2/periodic_health/:report_id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  report_id: 1
+}

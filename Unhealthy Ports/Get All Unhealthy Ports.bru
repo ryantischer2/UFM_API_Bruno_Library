@@ -1,0 +1,15 @@
+meta {
+  name: Get All Unhealthy Ports
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/app/unhealthy_ports
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~connectivity: host-to-switch
+}

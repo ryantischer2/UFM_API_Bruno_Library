@@ -1,0 +1,15 @@
+meta {
+  name: Get All Logical Servers
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/resources/environments/:env_name/logical_servers
+  body: none
+  auth: inherit
+}
+
+params:path {
+  env_name: <env_name>
+}

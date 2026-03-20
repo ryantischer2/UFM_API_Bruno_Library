@@ -1,0 +1,15 @@
+meta {
+  name: Get Link by Name
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/resources/links/:link_name
+  body: none
+  auth: inherit
+}
+
+params:path {
+  link_name: <link_name>
+}

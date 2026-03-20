@@ -1,0 +1,24 @@
+meta {
+  name: Add Template
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/templates
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "title": "template_title",
+    "systemType": "Mellanox Switch",
+    "content": ["the content of the template"],
+    "description": "template_description"
+  }
+}

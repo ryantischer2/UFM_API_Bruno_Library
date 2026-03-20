@@ -1,0 +1,26 @@
+meta {
+  name: Set System Properties
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{base_url}}/resources/systems/:system_id/properties
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+params:path {
+  system_id: <system_id>
+}
+
+body:json {
+  {
+    "script_file_name": "script_file_name",
+    "url": "url"
+  }
+}

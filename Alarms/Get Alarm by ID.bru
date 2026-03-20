@@ -1,0 +1,15 @@
+meta {
+  name: Get Alarm by ID
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/app/alarms/:alarm_id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  alarm_id: 1
+}

@@ -1,0 +1,11 @@
+meta {
+  name: Abort All Jobs
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{base_url}}/jobs/abortall
+  body: none
+  auth: inherit
+}

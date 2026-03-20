@@ -1,0 +1,15 @@
+meta {
+  name: Get Mirroring Template
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/app/mirrorings/:system_id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  system_id: <system_id>
+}

@@ -1,0 +1,24 @@
+meta {
+  name: Get All Systems
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/resources/systems
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~type: switch
+  ~model: 
+  ~role: 
+  ~brief: true
+  ~chassis: false
+  ~ports: false
+  ~ip: 
+  ~peer_name: 
+  ~in_rack: 
+  ~computes: 
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Get Monitoring Session Attributes
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base_url}}/monitoring/session/:session_id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  session_id: 0
+}

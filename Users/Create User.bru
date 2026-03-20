@@ -1,0 +1,23 @@
+meta {
+  name: Create User
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/app/users
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "new_user",
+    "group": "Tenant",
+    "password": "password123"
+  }
+}

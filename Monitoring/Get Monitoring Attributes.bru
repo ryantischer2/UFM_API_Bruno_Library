@@ -1,0 +1,11 @@
+meta {
+  name: Get Monitoring Attributes
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/monitoring/attributes
+  body: none
+  auth: inherit
+}

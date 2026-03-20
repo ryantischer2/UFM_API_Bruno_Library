@@ -1,0 +1,11 @@
+meta {
+  name: Get Port Groups Congestion
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/monitoring/port_groups
+  body: none
+  auth: inherit
+}

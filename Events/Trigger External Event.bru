@@ -1,0 +1,25 @@
+meta {
+  name: Trigger External Event
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/app/events/external_event
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "event_id": 554,
+    "external_event_name": "External event name",
+    "external_event_type": "External event type",
+    "external_event_source": "External event source",
+    "description": "External event description"
+  }
+}

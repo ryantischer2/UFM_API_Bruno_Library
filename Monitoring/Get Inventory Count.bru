@@ -1,0 +1,11 @@
+meta {
+  name: Get Inventory Count
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{base_url}}/monitoring/inventory/count
+  body: none
+  auth: inherit
+}

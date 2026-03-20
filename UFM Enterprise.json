@@ -1,0 +1,33 @@
+{
+  "name": "UFM Enterprise",
+  "variables": [
+    {
+      "name": "ufm_host",
+      "value": "",
+      "enabled": true,
+      "secret": false,
+      "type": "text"
+    },
+    {
+      "name": "base_url",
+      "value": "https://{{ufm_host}}/ufmRest",
+      "enabled": true,
+      "secret": false,
+      "type": "text"
+    },
+    {
+      "name": "username",
+      "value": "admin",
+      "enabled": true,
+      "secret": false,
+      "type": "text"
+    },
+    {
+      "name": "password",
+      "value": "admin",
+      "enabled": true,
+      "secret": true,
+      "type": "text"
+    }
+  ]
+}

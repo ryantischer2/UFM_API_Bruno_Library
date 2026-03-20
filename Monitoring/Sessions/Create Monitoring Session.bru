@@ -1,0 +1,26 @@
+meta {
+  name: Create Monitoring Session
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/monitoring/start
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "attributes": ["Infiniband_MBOut", "Infiniband_MBIn"],
+    "functions": ["RAW"],
+    "scope_object": "Site",
+    "interval": 2,
+    "monitor_object": "Device",
+    "objects": ["Grid.default"]
+  }
+}

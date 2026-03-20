@@ -1,0 +1,26 @@
+meta {
+  name: Get Job PM Counters
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/monitoring/job/resources/pm_counters
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+params:query {
+  ~csv_format: true
+}
+
+body:json {
+  {
+    "hosts_names": "r-ufm51,r-ufm77",
+    "pm_counters_names": ["PortRcvConstraintErrors", "PortXmitConstraintErrors"]
+  }
+}
